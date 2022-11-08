@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --open",
     "preview": "yarn build; cd dist/ ; http-server -o index.html -c-1",
     "build": "rm -rf dist;webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
