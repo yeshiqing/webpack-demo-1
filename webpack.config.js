@@ -1,18 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const base = require('./webpack.config.base.js')
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
+    ...base,
     devtool: 'eval',
     devServer: {
         contentBase: './dist'
     },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'foo.[contenthash].js',
-    },
+    mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Jeffrey Ye',
@@ -23,7 +20,10 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
+                use: [
+                    "style-loader",
+                    "css-loader"
+                ]
             }
         ]
     }
