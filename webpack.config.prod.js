@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 // const devMode = process.env.NODE_ENV !== "production";
 
+const base = require('./webpack.config.base.js')
+
 module.exports = {
     ...base,
     mode: 'production',

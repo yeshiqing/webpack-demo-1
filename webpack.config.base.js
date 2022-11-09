@@ -1,7 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
-const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
     entry: './src/index.js',
@@ -12,6 +10,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Jeffrey Ye',
+            content: 'app content',
             template: 'src/assets/index.html'
         })
     ],
