@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server",
     "build": "rm -rf dist ;NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack --config webpack.config.prod.js",
     "preview": "yarn build; cd dist/ ; http-server -o index.html -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
